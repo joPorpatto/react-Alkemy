@@ -60,6 +60,7 @@ const HomeScreen = () => {
                                                                                 value={values.name}
                                                                                 onChange={handleChange}
                                                                                 onBlur={handleBlur}
+                                                                                autoComplete="off"
                                                                         />
                                                                         <button         
                                                                                 className="btn btn-outline-success"     
