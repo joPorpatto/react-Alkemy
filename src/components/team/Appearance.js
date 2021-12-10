@@ -29,14 +29,12 @@ export const Appearance = () => {
                         <div className="card text-center mt-4 ms-2 me-2 bg-dark text-white">
                                 
                                 <div className="card-body">
-                                        Altura promedio:  {h.toFixed(2)}
+                                        Altura promedio:  {h.toFixed(0)}
                                         <br/>
-                                        Peso promedio:  {w.toFixed(2)}
+                                        Peso promedio:  {w.toFixed(0)}
                                         
                                 </div>
-                                <div className="card-footer text-muted">
-                                         altura y peso 
-                                </div>
+                                
                         </div>
                 </div>
         )

@@ -33,11 +33,11 @@ export const Powerstats = () => {
                                 <div className="card-header">
                                         <h3>Poderes acumulados</h3>
                                 </div>
-                                <div className="card-body">
+                                <div className="card-body  ">
                                         {
                                                 powerStatsSort.map((name,i)=>(                                                       
                                                         
-                                                        <li key={i}  >
+                                                        <li className="list-group" key={i}  >
                                                                 {name.name}: {name.value}
 
                                                         </li>

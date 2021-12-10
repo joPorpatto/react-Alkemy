@@ -85,7 +85,7 @@ export const TeamCard = (hero) => {
                                                                 <dt>Powerstats</dt>
                                                                         {
                                                                                 namesPow.map((name,i)=>(
-                                                                                        <li  key={i}>
+                                                                                        <li   className='list-group' key={i}>
                                                                                                 {name}: {(valuesPow[i]===0)?"null":valuesPow[i]}
                                                                                         </li>
                                                                                 ))
