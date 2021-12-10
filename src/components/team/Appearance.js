@@ -20,8 +20,10 @@ export const Appearance = () => {
                 }
         })
 
-        const h = height/(heightNotNullTotal.length)
-        const w =weight/(weightNotNullTotal.length)
+        let h = Number(height/(heightNotNullTotal.length))
+        let w =weight/(weightNotNullTotal.length)
+        if (!h) {h=0}
+        if (!w) {w=0}
 
         return (
                <div  className="container border pb-4">
