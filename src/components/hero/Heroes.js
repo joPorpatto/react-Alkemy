@@ -14,14 +14,16 @@ export const Heroes = () => {
                                          <div className="row row-cols-1 row-cols-md-3 ">
                         
                                            {
-                                                (!!current)&&
+                                                (!!current)?
                                                 current.map(hero=>(
                                                 <TeamCard
                                                                 key={hero.id}
                                                                 {...hero}
                                                         />
                                                 
-                                                 ))
+                                                 )):
+                                                 <h3 className='text-white'>Sin resultados...</h3>
+                                                
                                                 
                                          }
                                           </div>
