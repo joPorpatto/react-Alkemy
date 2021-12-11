@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useEffect } from "react";
 import Swal from "sweetalert2";
 import { checkPowerTeam } from "../helpers/checkPowerTeam";
 import { types } from "../types/types";
@@ -11,12 +12,31 @@ export const searchHero = ({name}) => {
                 await axios.get(`https://superheroapi.com/api/10222829918315897/search/${name}`)
                 .then((response) =>{
                         
+                        
                         dispatch({
                                 type:  types.currentHero,
                                 payload: response.data.results
                         })
+
+                        dispatch({
+                        type: types.loadingFinish
+                        })                   
+                        
+                       
+                        
                 }).catch((err) =>{
+                        dispatch({
+                        type: types.loadingFinish
+                        })                   
                         Swal.fire("error") 
+                })
+        }
+}
+
+export const loadingShow = ()=>{
+        return (dispatch)=>{
+                dispatch({
+                        type: types.loading
                 })
         }
 }
