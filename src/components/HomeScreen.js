@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from 'formik'
 import { useDispatch } from 'react-redux'
-import { searchHero } from '../actions/hero'
+import { Loading } from './Loading'
+
+import { loadingShow, searchHero } from '../actions/hero'
 import { Heroes } from './hero/Heroes'
 import { Navbar } from './Navbar'
 import { Team } from './team/Team'
@@ -39,6 +41,8 @@ const HomeScreen = () => {
                                 onSubmit={
                                         (values,{resetForm})=>{
                                                 resetForm();
+
+                                                dispatch(loadingShow())
                                                 dispatch(searchHero(values))
 
                                         }
@@ -84,7 +88,8 @@ const HomeScreen = () => {
                         </Formik>
 
 
-                        
+                         <Loading/>
+                       
                         <Heroes/>
                         
                 </>
