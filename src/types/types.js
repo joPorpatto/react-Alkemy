@@ -10,6 +10,8 @@ export const types = {
         
         checkingStart: '[Auth] cheking start',
         checkingFinish: '[Auth] checking finish',
+         loading: '[hero] loading',
+        loadingFinish: '[hero] finish',
 
         teamHero: '[hero] team hero',
         currentHero: '[hero] current hero',
