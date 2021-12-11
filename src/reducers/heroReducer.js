@@ -14,7 +14,8 @@ const initialState ={
                 combat: 0,
         },
         height: 0,
-        weight:0
+        weight:0,
+        loading: false,
 
 }
 
@@ -23,6 +24,19 @@ const initialState ={
 
 export const heroReducer = (state=initialState, action) =>{
         switch (action.type) {
+                
+                case types.loading:
+                        return {
+                                ...state,
+                                loading: true
+
+                        }
+                case types.loadingFinish:
+                        return {
+                                ...state,
+                                loading: false
+
+                        }
                 
                 case types.teamHero:
                         return {
